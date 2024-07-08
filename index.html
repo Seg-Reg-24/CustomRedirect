@@ -1,167 +1,48 @@
 <!DOCTYPE html>
-<html title="infoblox-redirect-page">
+<html lang="en">
 <head>
-    <title>Autenticación requerida</title>
-    <link rel="icon" type="image/x-icon" href="/smart-proxy/resources/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="/smart-proxy/resources/favicon.svg" />
-    <style>
-        a[_ngcontent-c12]{color:#0056b3;text-decoration:none}
-        body[_ngcontent-c12]{margin:9;font-size:14px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif}
-        h1[_ngcontent-c12]{font-size:24px;margin:0;color:#cc0000;text-align: center}
-        .redirect-page-header[_ngcontent-c12]{height:120px;background-color:#f2f2f2;padding-top:28px;display: flex;align-items: center;flex-direction: column;}
-        .header-content[_ngcontent-c12]{display: flex;align-items: center;width: 100%;padding: 0 15px;}
-        .blue-bar[_ngcontent-c12]{width: 100%;border-bottom:8px solid #0056b3;margin-top: 10px;}
-        .col-md-8[_ngcontent-c12]{width:66.6666666667%;float:left;position:relative;min-height:1px;padding-left:15px;padding-right:15px}
-        p[_ngcontent-c12]{color:#0056b3;margin:0 0 10px} /* Cambiado a azul AirPak */
-        .bold[_ngcontent-c12]{font-weight:700}
-        .company-logo[_ngcontent-c12]{width:200px;margin:0 15px}
-        .message-block[_ngcontent-c12]{color:#0056b3;margin:20px 15px} /* Cambiado a azul AirPak */
-        .company-text[_ngcontent-c12]{margin:20px 15px 10px;font-weight:700;color:#0056b3}
-        .restriction-icon[_ngcontent-c12]{width:200px;margin:20px auto;display:block;} /* Ajustado tamaño del ícono */
-        .block-text[_ngcontent-c12]{font-size: 150px;} /* Ajustado tamaño del texto de bloqueo */
-    </style>
-    <script type="text/javascript">
-        function loader(){
-            document.getElementById('codeViewer').addEventListener('click', function () {
-                element = document.getElementById('code');
-                element.style.display='inline';
-            });
-            var ibFooter = document.getElementById('infobloxFooter');
-            if (ibFooter != null) {
-                ibFooter.style.display='none';
-            }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top w3-center access-denied"><code>Acceso Denegado</code></h1>
+        <hr class="w3-border-white w3-animate-left" style="margin:auto;width:50%">
+        <div class="w3-container w3-center">
+            <h3 class="custom-text">El acceso a este sitio se bloqueó porque se identificó como malicioso o el sitio fue bloqueado explícitamente por su política de navegación a internet y de seguridad corporativa.</h3>
+            <h3>Si cree que fue bloqueado por error, comuníquese directamente con su equipo de tecnología local.</h3>
+            <h3 class="w3-animate-zoom">🚫🚫🚫</h3>
+        </div>
+    </div>
+
+    <!-- Logos en las esquinas inferiores -->
+    <img src="AirPakLogo.png" class="logo-izquierda">
+    <img src="InfobloxLogo.png" class="logo-derecha">
+
+    <!-- Sección de código de bypass -->
+    <div class="message-block w3-display-bottommiddle">
+        <br/><br/>
+        <p style="color:red;"></p>
+        <p><b>Si tiene el código de acceso, haga clic </b><a href="#" onclick="toggleCodeForm();"><u><b>aquí</b></u></a></p>
+        <div id="code" style="display:none;">
+            <form method="post">
+                <p><span style="padding-right:10px">Código de Bypass </span><input type="text" name="ib-auth-token" value=""/></p>
+                <input type="submit" value="Enviar"/>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script adicional si es necesario -->
+
+    <script>
+        // Función para manejar la visualización del formulario de código de bypass
+        function toggleCodeForm() {
+            var codeForm = document.getElementById('code');
+            codeForm.style.display = (codeForm.style.display === 'none' || codeForm.style.display === '') ? 'block' : 'none';
         }
     </script>
-</head>
-<body onload="loader()">
-    <div _ngcontent-c12=""> 
-        <div _ngcontent-c12="" class="message-block"> 
-            <p _ngcontent-c12=""><style type="text/css">
-                * {
-                    box-sizing: border-box;
-                }
-
-                a {
-                    color: #0056b3;
-                    text-decoration: none;
-                }
-
-                body {
-                    margin: 9;
-                    font-size: 14px;
-                    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                }
-
-                h1 {
-                    font-size: 24px;
-                    margin: 0;
-                    color: #cc0000;
-                    text-align: center;
-                }
-
-                .redirect-page-header {
-                    height: 120px;
-                    background-color: #f2f2f2;
-                    padding-top: 28px;
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                }
-
-                .header-content {
-                    display: flex;
-                    align-items: center;
-                    width: 100%;
-                    padding: 0 15px;
-                }
-
-                .blue-bar {
-                    width: 100%;
-                    border-bottom: 8px solid #0056b3;
-                    margin-top: 10px;
-                }
-
-                .col-md-8 {
-                    width: 66.6666666667%;
-                    float: left;
-                    position: relative;
-                    min-height: 1px;
-                    padding-left: 15px;
-                    padding-right: 15px;
-                }
-
-                p {
-                    color: #0056b3;
-                    margin: 0 0 10px;
-                }
-
-                .bold {
-                    font-weight: bold;
-                }
-
-                .company-logo {
-                    width: 200px;
-                    margin: 0 15px;
-                }
-
-                .message-block {
-                    color: #0056b3;
-                    margin: 20px 15px;
-                }
-
-                .company-text {
-                    margin: 20px 15px 10px 15px;
-                    font-weight: bold;
-                    color: #0056b3;
-                }
-
-                .restriction-icon {
-                    width: 200px;
-                    margin: 20px auto;
-                    display: block;
-                }
-
-                .block-text {
-                    font-size: 16px; /* Tamaño del texto de bloqueo */
-                }
-            </style>
-            <div class="bordered-panel">
-                <div class="redirect-page-header">
-                    <div class="header-content">
-                        <img class="company-logo" alt="AirPak" src="./AirPakLogo.png" />
-                        <div class="col-md-8">
-                            <h1 class="bold access-denied">ACCESO DENEGADO</h1>
-                        </div>
-                    </div>
-                    <div class="blue-bar"></div>
-                </div>
-                <img class="restriction-icon" alt="Restricted" src="./BlockLogo.png" />
-                <div class="message-block">
-                    <p class="block-text"><b>El acceso a este sitio se bloqueó porque se identificó como malicioso o el sitio fue bloqueado explícitamente por su política de navegación a internet y de seguridad corporativa.</b></p>
-                    <p class="block-text"><b>Si cree que fue bloqueado por error, comuníquese directamente con su administrador local.</b></p>
-                </div>
-                <div id="infobloxFooter">
-                    <p class="company-text">Powered by Infoblox</p>
-                    <a href="http://www.infoblox.com/"><img class="company-logo" alt="Infoblox" src="/smart-proxy/resources/logo.svg" /></a>
-                </div>
-            </div>
-            </p> 
-        </div> 
-        <div class="message-block" _ngcontent-c12="">
-            <br/><br/>
-            <p _ngcontent-c12="" style="color:red;"></p>
-            <p _ngcontent-c12=""><b>Si tiene el código de acceso, haga clic </b><a href="#" id="codeViewer"><u><b>aquí</b></u></a></p>
-            <div id="code" style="display:none;">
-                <form method="post">
-                    <p _ngcontent-c12=""><span style="padding-right:10px">Código de Bypass </span><input type="text" name="ib-auth-token" value=""/></p>
-                    <input type="submit" value="Enviar"/>
-                </form>
-            </div>
-        </div>
-        <p _ngcontent-c12="" class="company-text">Powered by Infoblox</p> 
-        <a _ngcontent-c12="" href="http://www.infoblox.com/">
-            <img _ngcontent-c12="" alt="Infoblox" class="company-logo" src="./InfobloxLogo.png" />
-        </a> 
-    </div>
 </body>
 </html>

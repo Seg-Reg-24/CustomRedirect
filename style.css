@@ -1,0 +1,52 @@
+/* Estilos generales del cuerpo del documento */
+body {
+    background-color: black;
+    color: white;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+}
+
+/* Estilos para el título de "Acceso Denegado" */
+.access-denied {
+    color: red; /* Color rojo para el título */
+}
+
+/* Estilos para el logo de escudo */
+.logo-escudo {
+    display: block;
+    margin: 20px auto 0; /* Margen superior para separarlo del título */
+    width: 100px; /* Ajusta el tamaño según tu preferencia */
+    height: auto;
+}
+
+/* Estilos para la sección de mensajes y formulario de bypass */
+.message-block {
+    text-align: center; /* Centrado del contenido */
+    margin-top: 20px; /* Margen superior para separarlo del título */
+    margin-bottom: 20px; /* Margen inferior para separarlo de los logos inferiores */
+}
+
+.message-block p {
+    color: white; /* Color de texto blanco para los mensajes */
+}
+
+/* Estilos para los logos en las esquinas inferiores */
+.logo-izquierda {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 140px;
+    height: auto;
+}
+
+.logo-derecha {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 140px;
+    height: auto;
+}
